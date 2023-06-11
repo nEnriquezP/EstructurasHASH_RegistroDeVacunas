@@ -56,7 +56,7 @@ public class RegistroVacunasGUI extends JFrame{
 
     public void cargarRegistroVacunas() {
         try {
-            File archivo = new File("registro_vacunas.txt");
+            File archivo = new File("vacunas.txt");
             if (archivo.exists()) {
                 BufferedReader br = new BufferedReader(new FileReader(archivo));
                 String linea;
@@ -75,7 +75,7 @@ public class RegistroVacunasGUI extends JFrame{
 
     public void guardarRegistroVacunas() {
         try {
-            File archivo = new File("registro_vacunas.txt");
+            File archivo = new File("vacunas.txt");
             BufferedWriter bw = new BufferedWriter(new FileWriter(archivo));
             for (String cui : registroVacunas.keySet()) {
                 String registro = registroVacunas.get(cui);
